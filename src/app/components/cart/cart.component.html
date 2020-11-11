@@ -1,0 +1,11 @@
+<h2>Cart</h2>
+
+<p>Total Length {{ (cartItems$ | async).length }}</p>
+
+<button (click)="addItem()" >
+    Add Item
+</button>
+
+<button (click)="emptyCart()">
+    Empty
+</button>

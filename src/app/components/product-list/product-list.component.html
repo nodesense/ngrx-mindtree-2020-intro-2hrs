@@ -1,0 +1,19 @@
+<h2>Product List</h2>
+ 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Year</th> 
+        <th>Add</th>
+    </tr>
+
+    <tr *ngFor="let product of (productState$ | async).products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.year}}</td> 
+        <td>
+            <button (click)="addToCart(product)"> +1 </button>
+        </td>
+    </tr>
+</table>
